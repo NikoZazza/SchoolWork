@@ -23,10 +23,10 @@ string crypt(string str, int key){
 		int c = (int) chr; //carattere ascii in dec
 		
 		if(c >= 65 && c <= 90) //carattere maiuscolo
-			ret += (char)(c - 65 + key) % 25 + 65;
+			ret += (char)(c - 65 + key) % 26 + 65;
 		
 		else if(c >= 97 && c <= 122) //carattere minuscolo
-			ret += (char)(c - 97 + key) % 25 + 97;			
+			ret += (char)(c - 97 + key) % 26 + 97;			
 		else //carattere sconosciuto
 			ret += chr;
 	}	
@@ -38,6 +38,7 @@ ODQHEELDDJOLLUWLFROOL
 */
 
 void decode(string str){
+	str = delSpaces(str);
 	char parole[] = {'A', 'E', 'I', 'O', 'U'};
 	char last = ' ';
 	
@@ -51,16 +52,33 @@ void decode(string str){
 					cout<<(char) ((int)str[k] - p);
 				}		
 				string ask = "";
-				cout<<endl<<"La frase e' giusta? [Y/N] -> ";
+				cout<<endl<<"La frase e' chiara? [Y/N] -> ";
 				cin>>ask;
 				if(ask == "Y" || ask == "y"){
 					cout<<endl<<"La chiave e' in base "<<(int)parole[j] - (int)last<<endl;
 					return;
 				}				
 			}			
-		}	
+		}			
 		last = chr;
 	}
+	cout<<endl<<"Brute force enabled! "<<endl;
+	
+	for(int c = 1; c <= 26; c++){		
+		for(int i = 0; i < str.length(); i++){
+			char& chr = str[i];
+			int y = (int)(((int)chr - 65 - c) % 26 + 65);
+			//cout<<(int)chr<<" - 65 - "<<c<<" % 26 + 65 = "<<y;
+			
+			/*if(y < 65 || y > 90)
+				cout<<y<<" range ";
+			*/
+			cout<<(char)y;
+						
+		}
+		cout<<" con chiave in base "<<c<<endl;
+	}	
+	
 }
 
 int main(){
