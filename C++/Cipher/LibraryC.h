@@ -33,7 +33,7 @@ namespace cesare{
 	
 	/**
 	Descrizione:
-		Questa funzione serve a decodificare una frase brutalmente, cioè forzando la frase tentando diverse chiavi, secondo il cifrario di Cesare	
+		Questa funzione serve a decodificare una frase brutalmente, cioÃ¨ forzando la frase tentando diverse chiavi, secondo il cifrario di Cesare	
 	Parametri:
 		-value = rappresenta la frase da decifrare
 	Valore di ritorno: nessuno
@@ -42,17 +42,17 @@ namespace cesare{
 }
 
 /**
-Raccolta di funzioni per il cifrario di Vigenère
+Raccolta di funzioni per il cifrario di VigenÃ¨re
 
 Esempio:
 Testo = LANEBBIAAGLIIRTICOLLI
 Chiave = CARDUCCI
-Risultato = NAWHVDKICGCKCTVQEOCOC
+Risultato = NAEHVDKICGCLLVKKQLCL
 */
 namespace vigenere{
 	/**
 	Descrizione:
-		Questa funzione serve a codificare una frase secondo il cifrario di Vigenère
+		Questa funzione serve a codificare una frase secondo il cifrario di VigenÃ¨re
 	Parametri:
 		-value = rappresenta la frase da cifrare
 		-key = rappresenta la chiave sulla quale bisogna codificare la frase
@@ -61,7 +61,7 @@ namespace vigenere{
 	string crypt(string value, int key);
 	/**
 	Descrizione:
-		Questa funzione serve a decodificare una frase secondo il cifrario di Vigenère
+		Questa funzione serve a decodificare una frase secondo il cifrario di VigenÃ¨re
 	Parametri:
 		-value = rappresenta la frase da decifrare
 		-key = rappresenta la chiave sulla quale bisogna decodificare la frase
@@ -98,7 +98,7 @@ namespace file{
 	Parametri:
 		-dir = rappresenta il nome del file da leggere (deve essere specificata anche l'estenzione)
 		-value = rappresenta la stringa da scrivere su file
-	Valore di ritorno: (bool) ritorna se la frase è stata scritta su file (true) o si è verificato un' errore (false)
+	Valore di ritorno: (bool) ritorna se la frase Ã¨ stata scritta su file (true) o si Ã¨ verificato un' errore (false)
 	*/
 	bool writeLine(string dir, string value);
 }
