@@ -1,0 +1,35 @@
+Descrizione:
+L'obbiettivo del progetto è quello di realizzare una libreria statica contente una serie di funzioni per criptare e decriptare delle stringhe secondo il cifrario di Cesare e Vigenere.
+Le funzioni sono in grado di leggere i caratteri sia in maiuscolo sia in minuscolo.
+
+Sviluppo:
+Il file è composto fa 3 namespaces:
+-cesare
+-vigenere
+-file
+
+Dentro il namespace di cesare troviamo tre funzioni:
+-crypt(value, key)
+  Descrizione:
+    Questa funzione serve a codificare una frase secondo il cifrario di Cesare	
+	Parametri:
+		-value = rappresenta la frase da cifrare
+		-key = rappresenta la chiave sulla quale bisogna codificare la frase
+	Valore di ritorno: (string) ritorna la frase codificata
+	
+-decrypt(value, key)
+  Descrizione:
+		Questa funzione serve a decodificare una frase secondo il cifrario di Cesare	
+	Parametri:
+		-value = rappresenta la frase da decifrare
+		-key = rappresenta la chiave sulla quale bisogna decodificare la frase
+	Valore di ritorno: (string) ritorna la frase decodificata
+
+-bruteforce(value)
+  Descrizione:
+		Questa funzione serve a decodificare una frase brutalmente, cioè forzando la frase tentando diverse chiavi, secondo il cifrario di Cesare	
+	Parametri:
+		-value = rappresenta la frase da decifrare
+	Valore di ritorno: nessuno
+	
+Dentro il namespace di vigenere contiene due funzioni:
